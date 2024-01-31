@@ -3,6 +3,9 @@ import Products from './Products/Products';
 import './Shop.css'
 import Cart from '../Cart/Cart';
 import { addToDb, deleteShoppingCart, getShoppingCart } from '../../Utilitis';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 const Shop = () => {
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([])
@@ -69,7 +72,15 @@ const Shop = () => {
            <div className='order-section'>
                 {/* <h3>Order page</h3> */}
                 {/* <h1>cart length: {cart.length}</h1> */}
-                <Cart cart={cart} deleteCart={deleteCart}></Cart>
+                <Cart cart={cart} deleteCart={deleteCart}>
+                  <div>
+                
+                    <Link to='/orders'> 
+                    <button className='btn-Review'>  Review Order <FontAwesomeIcon icon={faArrowRight} className='btn-Review-icone' /></button>
+                    </Link>
+
+                  </div>
+                </Cart>
             </div>
         </div>
     );

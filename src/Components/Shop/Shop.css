@@ -1,17 +1,37 @@
-.shop-container{
+.shop-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
     position: relative;
 }
 
-.product-section{
+.product-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin:  50px;
-    
+    margin: 50px;
+
 
 }
-.order-section{
+
+.order-section {
     position: static;
+}
+
+.btn-Review {
+    margin-top: 10px;
+    width: 90%;
+    height: 56px;
+    border-radius: 4px;
+    background: #FF9900;
+    border: #FF9900;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+
+a {
+
+    text-decoration: none;
 }
