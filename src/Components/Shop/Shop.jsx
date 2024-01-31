@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Products from './Products/Products';
 import './Shop.css'
 import Cart from '../Cart/Cart';
-import { addToDb, getShoppingCart } from '../../Utilitis';
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../Utilitis';
 const Shop = () => {
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([])
@@ -50,6 +50,10 @@ const Shop = () => {
         setCart(newCart)
         addToDb(product.id)
     }
+    const deleteCart = () =>{
+        setCart([]);
+        deleteShoppingCart()
+    }
     return (
         <div className='shop-container'>
            <div className='product-section'>
@@ -65,7 +69,7 @@ const Shop = () => {
            <div className='order-section'>
                 {/* <h3>Order page</h3> */}
                 {/* <h1>cart length: {cart.length}</h1> */}
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} deleteCart={deleteCart}></Cart>
             </div>
         </div>
     );

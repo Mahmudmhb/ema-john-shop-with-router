@@ -1,10 +1,10 @@
-.cart-container{
+.cart-container {
     color: #2A414F;
     /* position: fixed; */
     position: sticky;
     top: 0;
 
-/* Body 1 */
+    /* Body 1 */
     font-family: Lato;
     font-size: 17px;
     font-style: normal;
@@ -15,4 +15,21 @@
     padding: 10px;
     /* width: 1440px; */
     /* height: 1024px;  */
+}
+
+.btn-clear-cart {
+    width: 90%;
+    height: 56px;
+    border-radius: 4px;
+    background: #FF3030;
+    border: #FF3030;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+svg.svg-inline--fa.fa-trash-can.btn {
+    font-size: 20px;
+    width: 24px;
 }

@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import { useLoaderData } from 'react-router-dom';
 import OrdersItem from '../OrdersItem/OrdersItem';
 import './Orders.css'
-import { removeFromDb } from '../../Utilitis';
+import { deleteShoppingCart, removeFromDb } from '../../Utilitis';
 
 const Orders = () => {
     const savedCart = useLoaderData ();
@@ -14,8 +14,13 @@ const Orders = () => {
         setCart(remaining)
         removeFromDb(id)
     }
-    console.log('cliked', cart)
-    console.log(cart)
+    // console.log('cliked', cart)
+    // console.log(cart)
+
+    const deleteCart = () =>{
+        setCart([]);
+        deleteShoppingCart()
+    }
     return (
         <div className='shop-container'>
             <div  className='ordered-section'>
@@ -31,7 +36,10 @@ const Orders = () => {
                </div>
             </div>
             <div  className='order-section'>
-                <Cart cart={cart}></Cart>
+                <Cart 
+                cart={cart}
+                deleteCart={deleteCart}
+                ></Cart>
             </div>
         </div>
     );
