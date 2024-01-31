@@ -1,0 +1,18 @@
+.cart-container{
+    color: #2A414F;
+    /* position: fixed; */
+    position: sticky;
+    top: 0;
+
+/* Body 1 */
+    font-family: Lato;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.085px;
+    background-color: rgba(255, 153, 0, 0.30);
+    padding: 10px;
+    width: 1440px;
+    height: 1024px; 
+}
