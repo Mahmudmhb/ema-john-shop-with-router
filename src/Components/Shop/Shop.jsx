@@ -63,8 +63,8 @@ const Shop = () => {
            </div>
 
            <div className='order-section'>
-                <h3>Order page</h3>
-                <h1>cart length: {cart.length}</h1>
+                {/* <h3>Order page</h3> */}
+                {/* <h1>cart length: {cart.length}</h1> */}
                 <Cart cart={cart}></Cart>
             </div>
         </div>
